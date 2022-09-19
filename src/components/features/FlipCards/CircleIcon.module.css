@@ -1,0 +1,59 @@
+.frontCircle {
+   position: absolute;
+   width: 44%;
+   padding-bottom: 44%;
+   background-color: #f2f2f2;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%) scale(100%);
+   border-radius: 50%;
+   transition: all 0.4s;
+   opacity: 1;
+}
+
+.frontCircle img {
+   position: absolute;
+   width: 65%;
+   height: 65%;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%) rotate(0deg);
+   transition: transform 0.32s;
+   display: block;
+   transition: all 1s;
+   filter: grayscale(0%);
+}
+
+.frontCircle:hover img {
+   animation-name: wiggle;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+   animation-timing-function: ease-in-out;
+
+   will-change: transform;
+   /* animation-direction:alternate; */
+}
+
+@media (hover: hover) {
+   .innerWrapper:hover .front .frontCircle {
+      transform: translate(-50%, -50%) scale(106%);
+   }
+
+   .innerWrapper .front .frontCircle .disabled {
+      pointer-events: none;
+   }
+
+   .innerWrapper:hover .front .frontCircle img {
+      transform: translate(-50%, -50%) scale(110%);
+   }
+
+   .innerWrapper:hover .triangleWrapper {
+      width: 10%;
+      height: 10%;
+   }
+
+   .innerWrapper:hover .backArrowImg {
+      width: 12%;
+      opacity: 1;
+   }
+}

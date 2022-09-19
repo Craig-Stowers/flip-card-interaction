@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useEffect } from "react";
+import useFetchJson from "./hooks/UseFetchJson";
+import DesignThinking from "./pages/DesignThinking/DesignThinking";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   const { data, error } = useFetchJson("/data.json");
+   if (error) console.log(error);
+
+   useEffect(() => {
+      if (data && data.title) document.title = data.title;
+   }, [data]);
+
+   return (
+      <div className="App">
+         <DesignThinking data={data} />
+      </div>
+   );
 }
 
 export default App;

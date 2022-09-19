@@ -1,0 +1,19 @@
+.wrapper {
+   opacity: 0;
+   transition: opacity 600ms;
+   overflow: hidden;
+   max-width: 920px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.show {
+   display: block;
+   opacity: 1;
+   height: auto;
+}
+.moduleWrapper {
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 860px;
+}

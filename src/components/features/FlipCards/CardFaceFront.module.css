@@ -1,0 +1,120 @@
+.wrapper {
+   background-color: #ffffff;
+}
+
+.circleWrapper {
+   -webkit-box-sizing: border-box; 
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   height: 78%;
+   position: relative;
+}
+
+.circle {
+   position: absolute;
+   width: 42%;
+   padding-bottom: 42%;
+   background-color: #f2f2f2;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   border-radius: 50%;
+   opacity: 0.5;
+   filter: grayscale(100%);
+   transition: all 0.8s;
+}
+
+.circle img {
+   position: absolute;
+   width: 65%;
+   height: 65%;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   display: block;
+   transition: all 0.3s;
+}
+
+.circle.starting {
+   animation-duration: 0.6s;
+   animation-name: enterCircle;
+   animation-fill-mode: forwards;
+}
+
+@keyframes enterCircle {
+   0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0.4;
+      filter: grayscale(100%);
+   }
+
+   15% {
+      transform: translate(-50%, -50%) scale(0.9);
+      opacity: 0.4;
+      filter: grayscale(100%);
+   }
+
+   60% {
+      transform: translate(-50%, -50%) scale(1.2);
+   }
+   100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+      filter: grayscale(0%);
+   }
+}
+
+.circle.idle {
+   opacity: 1;
+   filter: grayscale(0%);
+}
+
+.circle.active {
+   transition: all 0.3s;
+   opacity: 1;
+   filter: grayscale(0%);
+}
+
+.term {
+   height: 14%;
+   background-color: #aaaaaa;
+   color: white;
+   vertical-align: middle;
+   display: flex;
+   width: 100%;
+   opacity: 0.5;
+   transition: all 0.8s;
+}
+
+.term.active {
+   background-color:var(--darkblue);
+   opacity: 1;
+}
+
+.term h2 {
+   margin: auto;
+   font-weight: bold;
+   font-size: 2.4vw;
+}
+
+/* disable hover on mobile */
+@media (hover: hover) {
+   .innerWrapper:hover .circle.active {
+      transform: translate(-50%, -50%) scale(111%);
+   }
+   .innerWrapper:hover .circle.active img {
+      transform: translate(-50%, -50%) scale(108%);
+   }
+}
+
+@media only screen and (max-width: 660px) {
+   .term h2 {
+      font-size: 5vw;
+   }
+}
+
+@media only screen and (min-width: 860px) {
+   .term h2 {
+      font-size: 23px;
+   }
+}

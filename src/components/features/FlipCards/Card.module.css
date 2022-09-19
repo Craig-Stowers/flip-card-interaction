@@ -1,0 +1,36 @@
+.outerWrapper {
+   width: 50%;
+   display: inline-block;
+   vertical-align: top;
+   position: relative;
+   margin: 0px;
+   padding-bottom: 42%;
+   user-select: none;
+}
+
+.innerWrapper {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   width: calc(100% - 20px);
+   height: calc(100% - 20px);
+}
+
+.innerWrapper.disabled {
+   pointer-events: none;
+}
+
+@media only screen and (max-width: 660px) {
+   .outerWrapper {
+      width: 100%;
+      padding-bottom: 80%;
+   }
+
+   .innerWrapper {
+      position: absolute;
+      top: 2%;
+      left: 2%;
+      width: calc(96%);
+      height: calc(96%);
+   }
+}

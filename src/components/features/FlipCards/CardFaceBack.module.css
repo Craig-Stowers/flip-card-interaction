@@ -1,0 +1,125 @@
+.wrapper {
+   background-color:var(--lightblue);
+}
+
+.cardTop {
+   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+   box-sizing: border-box; /* Opera/IE 8+ */
+   height: 78%;
+   position: relative;
+   padding-top: 9%;
+}
+
+.circleWrapper {
+   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+   box-sizing: border-box; /* Opera/IE 8+ */
+   height: 50%;
+   width: 100%;
+   position: absolute;
+   bottom: 0px;
+}
+
+.circle {
+   position: absolute;
+   width: 32%;
+   padding-bottom: 32%;
+   background-color: #f2f2f2;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%) scale(100%);
+   border-radius: 50%;
+   transition: all 0.4s;
+   opacity: 1;
+}
+
+
+.circle img {
+   position: absolute;
+   width: 65%;
+   height: 65%;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%) rotate(0deg);
+   transition: transform 0.32s;
+   display: block;
+   transition: all 1s;
+   filter: grayscale(0%);
+}
+
+
+
+.info h2 {
+   color: white;
+   margin-top: 0px;
+   margin-bottom: 2.6%;
+   font-size: 3vw;
+   font-weight: 700;
+}
+
+.info hr {
+   border: none;
+   border-top: 2px dotted #fff;
+   color: #fff;
+   height: 2px;
+   width: 90%;
+   margin-top: 0px;
+   margin-bottom: 5%;
+}
+
+
+.description {
+   margin-top: -2px;
+   color: white;
+   display: flex;
+}
+.description p {
+   padding: 0px;
+   margin: 1% auto 0px auto;
+   width: 90%;
+   font-size: 2.1vw;
+}
+
+
+.triangleWrapper {
+   position: absolute;
+   bottom: 0px;
+   right: 0px;
+   width: 18%;
+   height: 18%;
+}
+
+.triangleWrapper polygon {
+   fill: var(--darkblue);
+}
+
+.backArrowImg {
+   position: absolute;
+   display: block;
+   width: 7%;
+   right: 1.5%;
+   bottom: 1.5%;
+   opacity:1;
+}
+
+
+@media only screen and (max-width: 660px) {
+   
+   .info h2 {
+      font-size: 6vw;
+   }
+   .description p {
+      font-size: 4.4vw;
+   }
+}
+
+@media only screen and (min-width: 860px) {
+ 
+   .info h2 {
+      font-size: 27.6px;
+   }
+   .description p {
+      font-size: 20.24px;
+   }
+}

@@ -1,3 +1,7 @@
+# Guroo producer challenge
+brief: https://7ghn8e.axshare.com/#id=4o1pxh&p=challenge_overview&g=1
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
